@@ -18,7 +18,7 @@ ________________________________________
 
 Public companies release extensive 10-K filings each year—hundreds of pages of financial statements, risk factors, operational updates, footnotes, and management commentary. For analysts, private equity teams, and corporate strategists, converting this information into actionable insights requires hours of manual work.
 Extracting core metrics such as revenue, margins, and cash flows is slow due to formatting inconsistencies. Item 1A risk factors require careful reading. MD&A sections demand deeper contextual reasoning. Market data must be fetched separately. And finally, the findings must be synthesized into an investment memo.
-This workflow is central to investment research and M&A diligence, but no existing tool automates the entire pipeline from raw 10-K → structured metrics → risk analysis → MD&A → valuation → memo.
+This workflow is central to investment research and M&A diligence, automates the entire pipeline from raw 10-K → structured metrics → risk analysis → MD&A → valuation → memo.
 
 Key challenges include:
 
