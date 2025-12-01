@@ -1,0 +1,62 @@
+# Google ADK (core framework for multi-agent workflows)
+google-adk>=0.1.0
+
+# Google GenAI SDK (models/gemini-* support)
+google-genai>=0.6.0
+
+# Environment variable support
+python-dotenv>=1.0.1
+
+# PDF parsing
+pdfplumber>=0.11.0
+pymupdf>=1.24.0
+
+streamlit
+lxml
+# Data handling
+pandas>=2.2.2
+numpy>=1.26.4
+
+# Debugging & formatting
+rich>=13.7.1
+
+# ADK uses pydantic schemas internally
+pydantic>=2.8.2
+
+# Optional but recommended for future RAG / embeddings
+# faiss-cpu>=1.7.4
+
+unstructured[pdf]
+pdfminer.six
+pillow
+pypdf
+
+google-generativeai
+pdfminer.six
+google-generativeai
+google-adk
+
+google
+beautifulsoup4
+lxml
+streamlit
+
+# requirements.txt (add this line)
+yfinance>=0.2.40
+
+mcp[cli]>=1.5.0
+yfinance>=0.2.40
+
+pytest
+fastapi 
+uvicorn
+
+fastapi
+uvicorn[standard]
+google-adk
+google-genai
+# plus whatever you already have for bs4, lxml, pandas, etc.
+fastapi
+json
+
+pandas

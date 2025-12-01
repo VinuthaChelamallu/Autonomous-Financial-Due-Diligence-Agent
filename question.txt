@@ -1,0 +1,177 @@
+✅ 1. Extraction Layer (10-K Parsing)
+
+Test whether raw values, facts, and company info were extracted properly.
+
+Ask:
+
+“What company was extracted from the document?”
+
+“What fiscal periods are available in the filing?”
+
+“What tables or sections were parsed from the 10-K?”
+
+“What is the latest reporting period for which we have data?”
+
+“What raw metrics do we have for revenue and net income?”
+
+✅ 2. Financial Metrics (FinancialAgent)
+
+Tests derived outputs from deterministic calculations.
+
+Ask:
+
+“What is the total revenue for the latest fiscal year?”
+
+“What is the net income for the latest reported period?”
+
+“What were total current assets?”
+
+“What is the company’s free cash flow?”
+
+“Explain the year-over-year revenue growth.”
+
+“What is the operating margin for the latest period?”
+
+“What is the gross margin?”
+
+“What are the main financial highlights extracted from the 10-K?”
+
+“What is the cash from operations and capital expenditures?”
+
+✅ 3. MCP Live Market Agent (Real-Time Price)
+
+This validates that:
+
+The Live Market Agent ran
+
+state["live_quote"] was populated
+
+Memo integrated live market data
+
+Ask:
+
+“What is the live stock price of the company?”
+
+“What is the real-time market capitalization?”
+
+“When was the live market snapshot last updated?”
+
+“What ticker symbol was used for the MCP lookup?”
+
+“Does the memo include a Live Market Snapshot section?”
+
+✅ 4. Risk & MD&A (RiskAgent)
+
+Tests LLM-powered extraction of narrative sections.
+
+Ask:
+
+“What are the top 5 risks the company faces?”
+
+“Summarize the Item 1A risks.”
+
+“What headwinds were mentioned in the MD&A?”
+
+“What tailwinds were identified by management?”
+
+“What are the biggest operational risks listed in the 10-K?”
+
+“How does the company describe supply chain challenges?”
+
+✅ 5. Investment Memo (MemoAgent)
+
+Tests whether memo uses:
+
+10-K financial facts
+
+Risk analysis
+
+MCP live market snapshot
+without hallucinating.
+
+Ask:
+
+“Summarize the investment memo.”
+
+“What are the main takeaways from the memo?”
+
+“What sections does the memo include?”
+
+“What is the financial overview in the memo?”
+
+“What is the Live Market Snapshot section saying?”
+
+“What risks were included in the memo’s Risk Assessment section?”
+
+✅ 6. Cross-Agent Reasoning (End-to-End Validation)
+
+These questions test full multi-agent synthesis.
+
+Ask:
+
+“How does the company’s latest financial performance compare to today’s stock price?”
+
+“Based on the 10-K and live data, what is the overall risk/return profile?”
+
+“How do Item 1A risks relate to current market valuation?”
+
+“Does the company’s free cash flow support the current market cap?”
+
+“What key drivers should investors watch going forward?”
+
+✅ 7. Memory System
+
+Tests whether previous memo and Q&A queries are saved.
+
+Ask:
+
+“What was the last memo generated?”
+
+“What did I ask previously about risks?”
+
+“What were my last questions about financials?”
+
+⭐ Bonus: Stress-Testing Questions
+
+These check if the guardrails prevent hallucination.
+
+Ask:
+
+“Give me revenue for 2030.” → Should say not available.
+
+“Predict next quarter revenue.” → Should refuse.
+
+“Give me a price target.” → Should decline.
+
+“Make up numbers for free cash flow.” → Should decline.
+
+“Tell me Apple’s market cap in 2010.” → Should refuse (not in data).
+
+🎉 Ready-to-Test Pack (copy/paste into Q&A loop)
+What company was extracted from the 10-K?
+What fiscal periods are available?
+What is the latest revenue?
+What is the net income for the latest period?
+What are total current assets?
+What is the free cash flow?
+What is the operating margin?
+
+What risks were identified in Item 1A?
+What headwinds and tailwinds did MD&A mention?
+
+What is the current live stock price?
+What is today’s live market cap?
+When was this live quote updated?
+
+Summarize the investment memo.
+What does the Live Market Snapshot section say?
+What are the main risk factors described in the memo?
+
+How do the 10-K financials compare with the live stock price?
+
+
+If you want, I can also give you:
+
+✅ A printable “Testing Checklist”
+OR
+✅ A full Google Docs template for Capstone Demo Testing Script
